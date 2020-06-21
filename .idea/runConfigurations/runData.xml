@@ -3,9 +3,9 @@
   <configuration default="false" factoryName="Application" name="runData" singleton="false" type="Application">
     <option name="MAIN_CLASS_NAME" value="net.minecraftforge.userdev.LaunchTesting"/>
     <option name="VM_PARAMETERS" value="-Dforge.logging.console.level=debug -Dforge.logging.markers=SCAN,REGISTRIES,REGISTRYDUMP"/>
-    <option name="PROGRAM_PARAMETERS" value="--mod examplemod --all --output C:\Users\Chris\IdeaProjects\Steamworks\src\generated\resources"/>
+    <option name="PROGRAM_PARAMETERS" value="--mod examplemod --all --output C:\Users\hasla\Desktop\coding\java\MC_steampunk_thingy\src\generated\resources"/>
     <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$\run"/>
-    <module name="Steamworks.main"/>
+    <module name="MC_steampunk_thingy.main"/>
     <envs>
       <env name="MOD_CLASSES" value="examplemod%%$PROJECT_DIR$\build\resources\main;examplemod%%$PROJECT_DIR$\build\classes\java\main"/>
       <env name="MCP_MAPPINGS" value="snapshot_20200514-1.15.1"/>
