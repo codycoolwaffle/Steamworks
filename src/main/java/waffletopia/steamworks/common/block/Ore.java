@@ -6,6 +6,7 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraftforge.common.ToolType;
 
+
 public class Ore
 {
 	public static Block ore_zinc = new Block(

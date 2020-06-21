@@ -21,6 +21,7 @@ import org.apache.logging.log4j.Logger;
 import java.util.stream.Collectors;
 
 import waffletopia.steamworks.common.block.Ore;
+import waffletopia.steamworks.common.world.gen.CustomOreGeneration;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod("steamworks")
@@ -90,6 +91,7 @@ public class SteamWorks
 		@SubscribeEvent
 		public static void onBlocksRegistry(final RegistryEvent.Register<Block> blockRegistryEvent)
 		{
+			CustomOreGeneration.setupOreGenerator(blockRegistryEvent);
 			// register a new block here
 			blockRegistryEvent.getRegistry().registerAll(Ore.ore_zinc);
 			LOGGER.info("HELLO from Register Block");

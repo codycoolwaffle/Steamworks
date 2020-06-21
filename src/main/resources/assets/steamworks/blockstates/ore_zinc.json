@@ -1,4 +1,5 @@
 {
-  "variants": {}
+  "variants": {
+    "": {"model": "steamworks:block/ore_zinc"}
+  }
 }
-
