@@ -12,7 +12,7 @@ import waffletopia.steamworks.common.block.SWBlocks;
 
 public class CustomOreGeneration
 {
-	public static void setupOreGenerator()
+	public static void generateOre()
 	{
 		for(Biome biome : ForgeRegistries.BIOMES)
 		{
@@ -21,13 +21,11 @@ public class CustomOreGeneration
 							new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,
 							                     SWBlocks.oreZinc.getDefaultState(), 10))
 					.withPlacement(
-							Placement.COUNT_RANGE.configure(new CountRangeConfig(20, 0, 0, 129))));
-            /*
-            count:        frequency
-            bottomOffset: minY1
-            topOffset:    minY2
-            maximum:      maxY
-             */
+							Placement.COUNT_RANGE.configure(new CountRangeConfig(20, 0, 0, 123))));
+			//Count:        frequency
+			//bottomOffset: minY1
+			//topOffset:    minY2
+			//maximum:      maxY
 		}
 	}
 }

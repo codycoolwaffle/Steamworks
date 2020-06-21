@@ -16,11 +16,9 @@ import org.apache.logging.log4j.Logger;
 import waffletopia.steamworks.common.block.SWBlocks;
 import waffletopia.steamworks.common.world.gen.CustomOreGeneration;
 
-// The value here should match an entry in the META-INF/mods.toml file
 @Mod("steamworks")
 public class SteamWorks
 {
-	// Directly reference a log4j logger.
 	private static final Logger LOGGER = LogManager.getLogger();
 	
 	public SteamWorks()
@@ -56,7 +54,6 @@ public class SteamWorks
 			return "Hello world";
 		});*/
 	}
-	
 	//Receiving
 	private void processIMC(final InterModProcessEvent event)
 	{
