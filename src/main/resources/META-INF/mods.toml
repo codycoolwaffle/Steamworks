@@ -24,12 +24,12 @@ displayName="Steamworks" #mandatory
 # A file name (in the root of the mod JAR) containing a logo for display
 # logoFile="" #optional
 # A text field displayed in the mod UI
-credits="YEEEEEEEEEEEEEEEEEEEEEEEEEEEEHAW" #optional
+credits="" #optional
 # A text field displayed in the mod UI
 authors="codicoolwaffle, Arkevorkhat, Waffletopia" #optional
 # The description text for the mod (multi line!) (#mandatory)
 description='''
-Steampunk aethstetic smile
+Steampunk aesthetic smile
 '''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 [[dependencies.steamworks]] #optional

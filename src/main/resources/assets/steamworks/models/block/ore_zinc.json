@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures":
+  {
+    "all": "steamworks:blocks/ore_zinc"
+  }
+}
