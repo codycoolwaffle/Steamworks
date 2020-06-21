@@ -30,13 +30,13 @@ public class SteamWorks
 		MinecraftForge.EVENT_BUS.register(this);
 		
 		SWBlocks.blockSetup();
-		CustomOreGeneration.setupOreGenerator();
+		CustomOreGeneration.generateOre();
 	}
 	
 	//new preInit
 	private void setup(final FMLCommonSetupEvent event)
 	{
-		LOGGER.info("suck my ass UwU");
+		//LOGGER.info("suck my ass UwU");
 	}
 	
 	//Client side
@@ -54,6 +54,7 @@ public class SteamWorks
 			return "Hello world";
 		});*/
 	}
+	
 	//Receiving
 	private void processIMC(final InterModProcessEvent event)
 	{
