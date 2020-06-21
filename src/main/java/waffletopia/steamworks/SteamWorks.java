@@ -2,6 +2,7 @@ package waffletopia.steamworks;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.item.Item;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -15,6 +16,8 @@ import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import waffletopia.steamworks.common.block.Ore;
+import waffletopia.steamworks.common.block.Ore_Zinc;
 
 import java.util.stream.Collectors;
 
@@ -78,7 +81,12 @@ public class SteamWorks
         @SubscribeEvent
         public static void onBlocksRegistry(final RegistryEvent.Register<Block> blockRegistryEvent) {
             // register a new block here
+            blockRegistryEvent.getRegistry().registerAll(Ore.ore_zinc);
             LOGGER.info("HELLO from Register Block");
+        }
+        @SubscribeEvent
+        public static void onItemsRegistry(final RegistryEvent.Register<Item> event){
+            event.getRegistry().registerAll(Ore.item_ore_zinc.setRegistryName("steamworks","ore_zinc"));
         }
     }
 }

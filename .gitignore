@@ -1,4 +1,6 @@
 # Project exclude paths
 /.gradle/
-/build/
+/build/*
 /build/classes/java/main/
+/run/saves
+/run/*.json
