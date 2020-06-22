@@ -82,8 +82,8 @@ public class OreGenerationStrategyFactory
 	
 	public class GeneratedOreGenerationStrategy extends OreGenerationStrategyBase
 	{
-		private boolean biomeWhitelisted = false;
 		private final List<Biome.Category> BiomeCategories;
+		private boolean biomeWhitelisted = false;
 		private int tries = -1;
 		private int bottomOffset = -1;
 		private int topOffset = -1;
@@ -121,27 +121,32 @@ public class OreGenerationStrategyFactory
 			this.configuration = configuration;
 		}
 		
-		@Override public int getSize()
+		@Override
+		public int getSize()
 		{
 			return 0;
 		}
 		
-		@Override public List<Biome.Category> getBiomeCategories()
+		@Override
+		public List<Biome.Category> getBiomeCategories()
 		{
 			return BiomeCategories;
 		}
 		
-		@Override public boolean biomesAreWhitelisted()
+		@Override
+		public boolean biomesAreWhitelisted()
 		{
 			return biomeWhitelisted;
 		}
 		
-		@Override public OreFeatureConfig getOreConfig()
+		@Override
+		public OreFeatureConfig getOreConfig()
 		{
 			return configuration;
 		}
 		
-		@Override public CountRangeConfig getCountRangeConfig()
+		@Override
+		public CountRangeConfig getCountRangeConfig()
 		{
 			return new CountRangeConfig(tries, bottomOffset, topOffset, maximumHeight);
 		}

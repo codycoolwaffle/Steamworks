@@ -15,7 +15,8 @@ import org.apache.logging.log4j.Logger;
 
 import waffletopia.steamworks.common.block.SWBlocks;
 
-@Mod("steamworks") public class SteamWorks
+@Mod("steamworks")
+public class SteamWorks
 {
 	private static final Logger LOGGER = LogManager.getLogger();
 	
@@ -61,7 +62,8 @@ import waffletopia.steamworks.common.block.SWBlocks;
 	}
 	
 	// You can use SubscribeEvent and let the Event Bus discover methods to call
-	@SubscribeEvent public void onServerStarting(FMLServerStartingEvent event)
+	@SubscribeEvent
+	public void onServerStarting(FMLServerStartingEvent event)
 	{
 		// do something when the server starts
 		LOGGER.info("HELLO from server starting");
