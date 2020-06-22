@@ -9,25 +9,16 @@ import vazkii.arl.block.BasicBlock;
 import waffletopia.steamworks.common.world.gen.OreLib.Strategies.OreGenerationStrategyBase;
 
 
-public class OreRegistry
-{
-	public static void RegisterOre(BasicBlock block, OreGenerationStrategyBase generatorOptions)
-	{
+public class OreRegistry {
+	public static void RegisterOre(BasicBlock block, OreGenerationStrategyBase generatorOptions) {
 		ForgeRegistries.BIOMES.getValues().stream().filter(biome -> (generatorOptions
-				                                                             .getBiomeCategories()
-				                                                             .contains(
-						                                                             biome.getCategory()))
-		                                                            == generatorOptions
-				                                                            .biomesAreWhitelisted())
-		                      .forEach(biome -> {
-			                      biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,
-			                                       Feature.ORE.withConfiguration(
-					                                       generatorOptions.getOreConfig())
-			                                                  .withPlacement(
-					                                                  Placement.COUNT_BIASED_RANGE
-							                                                  .configure(
-									                                                  generatorOptions
-											                                                  .getCountRangeConfig())));
-		                      });
+				.getBiomeCategories()
+				.contains(
+						biome.getCategory()))
+				== generatorOptions
+				.biomesAreWhitelisted())
+				.forEach(biome -> {
+					biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, generatorOptions.getConfiguredFeature(block));
+				});
 	}
 }
