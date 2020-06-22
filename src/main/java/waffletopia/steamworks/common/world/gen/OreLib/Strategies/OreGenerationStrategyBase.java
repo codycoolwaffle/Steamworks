@@ -1,4 +1,4 @@
-package waffletopia.steamworks.common.world.gen.OreLib;
+package waffletopia.steamworks.common.world.gen.OreLib.Strategies;
 
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.feature.OreFeature;

@@ -1,16 +1,12 @@
-package waffletopia.steamworks.common.world.gen.OreLib;
+package waffletopia.steamworks.common.world.gen.OreLib.Strategies;
 
 import net.minecraft.world.biome.Biome;
-import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.OreFeatureConfig;
 import net.minecraft.world.gen.placement.CountRangeConfig;
-import sun.security.krb5.Config;
 
-import javax.annotation.Generated;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Objects;
 
 public class OreGenerationStrategyFactory {
 

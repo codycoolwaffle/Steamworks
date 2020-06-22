@@ -14,7 +14,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import waffletopia.steamworks.common.block.SWBlocks;
-import waffletopia.steamworks.common.world.gen.CustomOreGeneration;
 
 @Mod("steamworks")
 public class SteamWorks
