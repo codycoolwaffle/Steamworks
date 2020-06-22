@@ -13,9 +13,10 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import waffletopia.steamworks.common.LibMisc;
 import waffletopia.steamworks.common.block.SWBlocks;
 
-@Mod("steamworks")
+@Mod(LibMisc.MOD_ID)
 public class SteamWorks
 {
 	private static final Logger LOGGER = LogManager.getLogger();

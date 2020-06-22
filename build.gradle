@@ -15,7 +15,7 @@ apply plugin: 'maven'
 ext.configFile = file('build.properties')
 ext.config = parseConfig(configFile)
 
-version = '1.0'
+version = "${config.mc_version}-${config.build_number}"
 group = 'waffletopia.${config.mod_id}' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = config.mod_name
 
@@ -89,6 +89,17 @@ dependencies {
     compile fg.deobf("vazkii.autoreglib:AutoRegLib:${config.arl_version}")
 }
 
+//Thanks Vazkii <3
+task incrementBuildNumber{
+    doFirst{
+        config.build_number = (config.build_number.toString().toInteger()) + 1
+        def output = new FileOutputStream(configFile)
+        config.toProperties().store(output, "")
+        output.close()
+    }
+}
+build.dependsOn incrementBuildNumber
+
 def parseConfig(File config) {
     config.withReader {
         def prop = new Properties()
@@ -111,4 +122,12 @@ jar {
     }
 }
 
-jar.finalizedBy('reobfJar')
+uploadArchives{
+    repositories{
+        mavenDeployer{
+            repository(url: "file://" + (System.getenv("local_maven") != null ? System.getenv("local_maven") : System.getenv("bamboo_local_maven")))
+        }
+    }
+}
+
+defaultTasks 'clean', 'build', 'incrementBuildNumber'

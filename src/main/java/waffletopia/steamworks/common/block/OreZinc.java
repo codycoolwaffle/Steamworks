@@ -18,5 +18,6 @@ public class OreZinc extends SWBlock
 		                      .harvestLevel(1)
 		                      .hardnessAndResistance(3f, 50f));
 		OreRegistry.RegisterOre(this, new BiasedCountGenerationStrategy());
+		
 	}
 }

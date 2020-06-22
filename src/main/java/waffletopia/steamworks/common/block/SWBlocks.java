@@ -7,5 +7,6 @@ public class SWBlocks
 	public static void blockSetup()
 	{
 		oreZinc = new OreZinc();
+		
 	}
 }
