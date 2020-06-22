@@ -50,3 +50,10 @@ Steampunk aesthetic smile
     versionRange="[1.15.2]"
     ordering="NONE"
     side="BOTH"
+
+[[dependencies.steamworks]]
+    modId="autoreglib"
+    mandatory=true
+    versionRange=""
+    ordering="BEFORE"
+    side="BOTH"

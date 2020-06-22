@@ -4,10 +4,10 @@ import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.OreFeatureConfig;
 import net.minecraft.world.gen.placement.CountRangeConfig;
-import net.minecraft.world.gen.placement.Placement;
-import vazkii.arl.block.BasicBlock;
 
 import java.util.List;
+
+import vazkii.arl.block.BasicBlock;
 
 public abstract class OreGenerationStrategyBase
 {
@@ -21,5 +21,5 @@ public abstract class OreGenerationStrategyBase
 	
 	public abstract CountRangeConfig getGeneratorConfig();
 	
-	public abstract ConfiguredFeature<?,?> getConfiguredFeature(BasicBlock block);
+	public abstract ConfiguredFeature<?, ?> getConfiguredFeature(BasicBlock block);
 }

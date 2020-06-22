@@ -12,9 +12,12 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven'
 
+ext.configFile = file('build.properties')
+ext.config = parseConfig(configFile)
+
 version = '1.0'
-group = 'waffletopia.steamworks' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = 'steamworks'
+group = 'waffletopia.${config.mod_id}' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = config.mod_name
 
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
 
@@ -82,18 +85,25 @@ repositories {
 }
 
 dependencies {
-    //TODO automate versions
-    minecraft 'net.minecraftforge:forge:1.15.2-31.2.21'
-    compile fg.deobf("vazkii.autoreglib:AutoRegLib:1.5-40.79")
+    minecraft "net.minecraftforge:forge:${config.mc_version}-${config.forge_version}"
+    compile fg.deobf("vazkii.autoreglib:AutoRegLib:${config.arl_version}")
+}
+
+def parseConfig(File config) {
+    config.withReader {
+        def prop = new Properties()
+        prop.load(it)
+        return (new ConfigSlurper().parse(prop))
+    }
 }
 
 jar {
     manifest {
         attributes([
-                "Specification-Title"     : "steamworks",
+                "Specification-Title"     : "${config.mod_id}",
                 "Specification-Vendor"    : "waffletopia",
                 "Specification-Version"   : "1",
-                "Implementation-Title"    : project.name,
+                "Implementation-Title"    : "${config.mod_id}",
                 "Implementation-Version"  : "${version}",
                 "Implementation-Vendor"   : "waffletopia",
                 "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
