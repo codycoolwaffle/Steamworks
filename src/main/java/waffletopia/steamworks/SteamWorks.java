@@ -30,7 +30,6 @@ public class SteamWorks
 		MinecraftForge.EVENT_BUS.register(this);
 		
 		SWBlocks.blockSetup();
-		CustomOreGeneration.generateOre();
 	}
 	
 	//new preInit
