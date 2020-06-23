@@ -77,6 +77,10 @@ minecraft {
 }
 
 repositories {
+    mavenLocal()
+    maven {
+        url "file://~/.m2/repository/com/arkevorkhat/orelib"
+    }
     maven {
         // for AutoRegLib
         name "blamejared"
@@ -87,6 +91,7 @@ repositories {
 dependencies {
     minecraft "net.minecraftforge:forge:${config.mc_version}-${config.forge_version}"
     compile fg.deobf("vazkii.autoreglib:AutoRegLib:${config.arl_version}")
+    compile fg.deobf("com.arkevorkhat:orelib:${config.orelib_version}")
 }
 
 //Thanks Vazkii <3

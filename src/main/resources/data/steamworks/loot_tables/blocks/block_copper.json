@@ -1,0 +1,13 @@
+{
+  "type": "block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [{
+        "type": "item",
+        "name": "steamworks:block_copper",
+        "weight": 1
+      }]
+    }
+  ]
+}

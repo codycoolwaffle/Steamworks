@@ -1,0 +1,8 @@
+{
+  "variants":
+  {
+    "":{
+      "model": "steamworks:block/ore_copper"
+    }
+  }
+}
