@@ -8,7 +8,6 @@ import waffletopia.steamworks.common.core.SteamworksCreativeTab;
 
 public class SWBlock extends BasicBlock
 {
-	
 	//default constructor
 	public SWBlock(String regname, Properties properties)
 	{

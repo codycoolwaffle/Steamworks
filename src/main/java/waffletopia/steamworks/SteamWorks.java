@@ -15,7 +15,6 @@ import org.apache.logging.log4j.Logger;
 
 import waffletopia.steamworks.common.LibMisc;
 import waffletopia.steamworks.common.block.SWBlocks;
-import waffletopia.steamworks.common.item.SWItem;
 import waffletopia.steamworks.common.item.SWItems;
 
 @Mod(LibMisc.MOD_ID)
@@ -32,7 +31,7 @@ public class SteamWorks
 		MinecraftForge.EVENT_BUS.register(this);
 		
 		SWBlocks.blockSetup();
-		SWItems.doSetup();
+		SWItems.itemSetup();
 	}
 	
 	//new preInit

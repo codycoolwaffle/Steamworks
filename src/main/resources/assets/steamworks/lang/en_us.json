@@ -1,7 +1,12 @@
 {
   "itemGroup.steamworks": "Steamworks",
+
   "block.steamworks.ore_zinc": "Zinc Ore",
   "block.steamworks.ore_copper": "Copper Ore",
+
+  "block.steamworks.block_zinc": "Block of Zinc",
+  "block.steamworks.block_copper": "Block of Copper",
+
   "item.steamworks.ingot_zinc": "Zinc Ingot",
   "item.steamworks.ingot_copper": "Copper Ingot"
 }

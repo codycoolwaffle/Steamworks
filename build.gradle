@@ -118,7 +118,7 @@ jar {
         attributes([
                 "Specification-Title"     : "${config.mod_id}",
                 "Specification-Vendor"    : "waffletopia",
-                "Specification-Version"   : "1",
+                "Specification-Version"   : "${version}",
                 "Implementation-Title"    : "${config.mod_id}",
                 "Implementation-Version"  : "${version}",
                 "Implementation-Vendor"   : "waffletopia",
