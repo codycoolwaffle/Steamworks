@@ -60,6 +60,6 @@ Steampunk aesthetic smile
 [[dependencies.steamworks]]
     modId="orelib"
     mandatory=true
-    versionRange="[0.2.0,)"
+    versionRange="[0.3.3,)"
     ordering="BEFORE"
     side="BOTH"
