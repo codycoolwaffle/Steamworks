@@ -1,5 +1,6 @@
 package waffletopia.steamworks;
 
+import net.minecraft.item.Item;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -28,6 +29,8 @@ public class SteamWorks
 		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::enqueueIMC);
 		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::processIMC);
 		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
+		FMLJavaModLoadingContext.get().getModEventBus().addGenericListener(Item.class, SWItems::registerItems);
+		
 		MinecraftForge.EVENT_BUS.register(this);
 		
 		SWBlocks.blockSetup();
