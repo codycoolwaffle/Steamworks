@@ -6,18 +6,18 @@ import com.mojang.blaze3d.vertex.IVertexBuilder;
 import net.minecraft.client.renderer.entity.model.BipedModel;
 import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.inventory.EquipmentSlotType;
 
 public class dapper_hat extends BipedModel<LivingEntity>
 {
 	private final ModelRenderer bone;
 	private final ModelRenderer bone2;
-
-	public dapper_hat() {
+	
+	public dapper_hat()
+	{
 		super(1);
 		this.textureWidth = 64;
 		this.textureHeight = 64;
-
+		
 		this.bone = new ModelRenderer(this, 0, 0);
 		this.bone.setRotationPoint(0F, 0F, 0F);
 		//this.bone.setRotationPoint(-16F, 24F, -16F);
@@ -31,9 +31,17 @@ public class dapper_hat extends BipedModel<LivingEntity>
 		
 		this.bone.addChild(this.bone2);
 	}
-
+	
 	@Override
-	public void render(MatrixStack matrixStack, IVertexBuilder buffer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha){
+	public void render(MatrixStack matrixStack,
+	                   IVertexBuilder buffer,
+	                   int packedLight,
+	                   int packedOverlay,
+	                   float red,
+	                   float green,
+	                   float blue,
+	                   float alpha)
+	{
 		bone.render(matrixStack, buffer, packedLight, packedOverlay);
 		bone.showModel = true;
 		bipedHeadwear.showModel = false;
@@ -41,8 +49,9 @@ public class dapper_hat extends BipedModel<LivingEntity>
 		bipedHead = bone;
 		super.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
 	}
-
-	public void setRotationAngle(ModelRenderer modelRenderer, float x, float y, float z) {
+	
+	public void setRotationAngle(ModelRenderer modelRenderer, float x, float y, float z)
+	{
 		modelRenderer.rotateAngleX = x;
 		modelRenderer.rotateAngleY = y;
 		modelRenderer.rotateAngleZ = z;

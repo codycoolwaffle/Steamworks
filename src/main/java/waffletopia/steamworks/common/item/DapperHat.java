@@ -24,13 +24,19 @@ public class DapperHat extends ArmorItem
 	
 	public DapperHat()
 	{
-		super(new DapperMaterial(), EquipmentSlotType.HEAD, new Item.Properties().group(SteamworksCreativeTab.INSTANCE));
-		this.model = DistExecutor.runForDist(() -> () -> new LazyValue<>(() -> this.provideArmorModel()),
-		                                     () -> () -> null);
+		super(new DapperMaterial(),
+		      EquipmentSlotType.HEAD,
+		      new Item.Properties().group(SteamworksCreativeTab.INSTANCE));
+		this.model
+				= DistExecutor.runForDist(() -> () -> new LazyValue<>(() -> this.provideArmorModel()),
+				                          () -> () -> null);
 	}
 	
 	@Override
-	public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type)
+	public String getArmorTexture(ItemStack stack,
+	                              Entity entity,
+	                              EquipmentSlotType slot,
+	                              String type)
 	{
 		return "steamworks:textures/model/dapper_hat.png";
 	}
@@ -39,18 +45,25 @@ public class DapperHat extends ArmorItem
 	@Override
 	@OnlyIn(Dist.CLIENT)
 	@SuppressWarnings("unchecked")
-	public <A extends BipedModel<?>> A getArmorModel(LivingEntity entityLiving, ItemStack itemStack, EquipmentSlotType armorSlot, A _default) {
+	public <A extends BipedModel<?>> A getArmorModel(LivingEntity entityLiving,
+	                                                 ItemStack itemStack,
+	                                                 EquipmentSlotType armorSlot,
+	                                                 A _default)
+	{
 		return (A) model.getValue();
 	}
 	
 	@OnlyIn(Dist.CLIENT)
-	public BipedModel<?> provideArmorModel() {
+	public BipedModel<?> provideArmorModel()
+	{
 		return new dapper_hat();
 	}
 	
 	@Override
-	public void setDamage(ItemStack stack, int damage) {
-		if (damage > stack.getMaxDamage()) {
+	public void setDamage(ItemStack stack, int damage)
+	{
+		if(damage > stack.getMaxDamage())
+		{
 			damage = stack.getDamage();
 		}
 		super.setDamage(stack, damage);

@@ -38,7 +38,9 @@ public class DapperMaterial implements IArmorMaterial
 	@Override
 	public Ingredient getRepairMaterial()
 	{
-		return Ingredient.fromTag(ItemTags.getCollection().getOrCreate(new ResourceLocation("forge", "ingots/brass")));
+		return Ingredient.fromTag(ItemTags.getCollection()
+		                                  .getOrCreate(new ResourceLocation("forge",
+		                                                                    "ingots/brass")));
 	}
 	
 	@Override
