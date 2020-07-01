@@ -6,15 +6,16 @@ import com.arkevorkhat.orelib.strategies.BiasedCountGenerationStrategy;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.material.Material;
+import net.minecraft.data.CookingRecipeBuilder;
+import net.minecraft.data.IFinishedRecipe;
 import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.InventoryHelper;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
-import net.minecraft.util.ActionResultType;
-import net.minecraft.util.Hand;
-import net.minecraft.util.SoundCategory;
-import net.minecraft.util.SoundEvents;
+import net.minecraft.item.crafting.Ingredient;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.util.*;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.world.World;
@@ -23,10 +24,14 @@ import net.minecraftforge.common.ToolType;
 import waffletopia.steamworks.common.HarvestLevel;
 import waffletopia.steamworks.common.core.SteamworksCreativeTab;
 import waffletopia.steamworks.common.item.SWItems;
+import waffletopia.steamworks.lib.IRecipeProvider;
 
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.util.function.Consumer;
 
-public class SWBlocks {
+import static waffletopia.steamworks.common.item.SWItems.ingotZinc;
+
+public class SWBlocks implements IRecipeProvider {
 	public static SWBlock oreZinc;
 	public static SWBlock oreCopper;
 	
@@ -41,7 +46,7 @@ public class SWBlocks {
 	
 	
 	public static void blockSetup() {
-		blockCharcoal = new SWBlock("charcoal",
+		blockCharcoal = new SWBlock("block_charcoal",
 			  Block.Properties.create(Material.ROCK)
 					.harvestTool(ToolType.PICKAXE)
 					.harvestLevel(HarvestLevel.WOOD)
@@ -113,5 +118,10 @@ public class SWBlocks {
 		
 		OreRegistry.RegisterOre(oreCopper, new BiasedCountGenerationStrategy());
 		OreRegistry.RegisterOre(oreZinc, new BiasedCountGenerationStrategy());
+	}
+	
+	@Override
+	public void registerRecipes(Consumer<IFinishedRecipe> consumer) {
+		CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(oreZinc.asItem()), ingotZinc, 0.1f, 200).build(consumer);
 	}
 }

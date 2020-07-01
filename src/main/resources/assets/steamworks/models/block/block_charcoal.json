@@ -1,6 +1,6 @@
 {
   "parent": "block/cube_all",
   "textures":{
-    "all": "steamworks:blocks/charcoal"
+    "all": "steamworks:blocks/block_charcoal"
   }
 }

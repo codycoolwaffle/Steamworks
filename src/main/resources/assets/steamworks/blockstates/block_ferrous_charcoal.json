@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "is_burning=false": {
+      "model": "steamworks:block/block_ferrous_charcoal"
+    },
+    "is_burning=true": {
+      "model": "steamworks:block/block_ferrous_charcoal_burning"
+    }
+  }
+}
