@@ -1,0 +1,11 @@
+{
+  "name": "Bloom Kiln",
+  "icon": "steamworks:block_ferrous_charcoal",
+  "category": "steamworks:mineral_processing",
+  "pages": [
+    {
+      "type": "text",
+      "text": "lorem ipsum dolor sit amet"
+    }
+  ]
+}

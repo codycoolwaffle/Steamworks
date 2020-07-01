@@ -1,0 +1,8 @@
+{
+  "name": "item.steamworks.manual.book_title",
+  "landing_text": "item.steamworks.manual.landing_text",
+  "creative_tab": "steamworks",
+  "show_toasts": false,
+  "i18n": true,
+  "pause_game": true
+}
