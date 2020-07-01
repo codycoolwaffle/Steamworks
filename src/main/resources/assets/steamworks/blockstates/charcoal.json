@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "layer_count=1": {
+      "model": "block/charcoal_height2"
+    },
+    "layer_count=2": {
+      "model": "block/charcoal_height4"
+    },
+    "layer_count=3": {
+      "model": "block/charcoal_height6"
+    },
+    "layer_count=4": {
+      "model": "block/charcoal_height8"
+    },
+    "layer_count=5": {
+      "model": "block/charcoal_height10"
+    },
+    "layer_count=6": {
+      "model": "block/charcoal_height12"
+    },
+    "layer_count=7": {
+      "model": "block/charcoal_height14"
+    },
+    "layer_count=8": {
+      "model": "block/charcoal"
+    }
+  }
+}

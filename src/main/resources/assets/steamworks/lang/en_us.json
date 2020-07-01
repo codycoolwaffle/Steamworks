@@ -8,5 +8,8 @@
   "block.steamworks.block_copper": "Block of Copper",
 
   "item.steamworks.ingot_zinc": "Zinc Ingot",
-  "item.steamworks.ingot_copper": "Copper Ingot"
+  "item.steamworks.ingot_copper": "Copper Ingot",
+
+  "item.steamworks.manual.book_title": "Mechanic's Handbook",
+  "item.steamworks.manual.landing_text": "The premiere handbook regarding all things steam power."
 }

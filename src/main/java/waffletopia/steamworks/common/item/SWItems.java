@@ -9,7 +9,7 @@ public class SWItems
 	public static SWItem ingotZinc;
 	public static SWItem ingotCopper;
 	public static SWItem ingotBrass;
-	
+	public static SWItem nuggetSteel;
 	public static DapperHat dapperHat;
 	
 	
@@ -18,7 +18,7 @@ public class SWItems
 		ingotZinc = new SWItem("ingot_zinc");
 		ingotCopper = new SWItem("ingot_copper");
 		ingotBrass = new SWItem("ingot_brass");
-		
+		nuggetSteel = new SWItem("nugget_steel");
 		dapperHat = new DapperHat();
 	}
 	

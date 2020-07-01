@@ -1,0 +1,10 @@
+{
+  "type": "crafting_shapeless",
+  "ingredients": [
+    {"tag":"forge:ingots/steel"}
+  ],
+  "result": {
+    "item": "steamworks:nugget_steel",
+    "count": 9
+  }
+}
