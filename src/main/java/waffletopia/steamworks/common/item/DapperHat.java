@@ -27,9 +27,8 @@ public class DapperHat extends ArmorItem
 		super(new DapperMaterial(),
 		      EquipmentSlotType.HEAD,
 		      new Item.Properties().group(SteamworksCreativeTab.INSTANCE));
-		this.model
-				= DistExecutor.runForDist(() -> () -> new LazyValue<>(this::provideArmorModel),
-				                          () -> () -> null);
+		this.model = DistExecutor.runForDist(() -> () -> new LazyValue<>(this::provideArmorModel),
+		                                     () -> () -> null);
 	}
 	
 	@Override
